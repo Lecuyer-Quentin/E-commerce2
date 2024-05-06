@@ -1,0 +1,486 @@
+{
+    "message":{
+        "error": {
+            "/SQLSTATE\\[23000\\]: Integrity constraint violation: 1062 Duplicate entry/": "Cet email est déjà utilisé",
+            "/SQLSTATE\\[HY000\\]: General error/": "Erreur lors de l'enregistrement de l'utilisateur",
+            "/Error\\[ID\\]/": "Veuillez entrer un ID",
+            "/Error\\[NOM\\]/": "Veuillez entrer un nom",
+            "/Error\\[PRENOM\\]/": "Veuillez entrer un prénom",
+            "/Error\\[EMAIL\\]/": "Veuillez entrer une adresse email valide",
+            "/Error\\[PASSWORD\\]/": "Veuillez entrer un mot de passe",
+            "/Error\\[PASSWORD_CONFIRM\\]/": "Veuillez confirmer votre mot de passe",
+            "/Error\\[ROLE\\]/": "Veuillez entrer un rôle",
+            "/Error\\[HASH\\]/": "Erreur lors du hachage du mot de passe",
+            "/Error\\[PASSWORD_COMPLEXITY\\]/": "Le mot de passe doit contenir au moins 8 caractères, une lettre majuscule, une lettre minuscule et un chiffre",
+            "/Error\\[REGISTER\\]/": "Erreur lors de l'enregistrement de l'utilisateur",
+            "/Error\\[CONNEXION\\]/": "Email ou mot de passe incorrect",
+            "/Error\\[DESCRIPTION\\]/": "Veuillez entrer une description",
+            "/Error\\[PRIX\\]/": "Veuillez entrer un prix",
+            "/Error\\[CATEGORIE\\]/": "Veuillez entrer une catégorie",
+            "/Error\\[IMAGE\\]/": "Veuillez entrer une image",
+            "/Error\\[ADD_PRODUCT\\]/": "Erreur lors de l'ajout du produit",
+            "/Error\\[UPLOAD_IMAGE\\]/": "Erreur lors de l'upload de l'image",
+            "/Error\\[INVALID_IMAGE_TYPE\\]/": "Le type de fichier n'est pas valide"
+        },
+        "success": {
+            "/Success\\[REGISTER\\]/": "Inscription réussie",
+            "/Success\\[CONNEXION\\]/": "Connexion réussie",
+            "/Success\\[ADD_PRODUCT\\]/": "Produit ajouté avec succès",
+            "/Success\\[UPLOAD_IMAGE\\]/": "Image uploadée avec succès"
+        }
+    },
+    "menu":{
+        "admin":{
+            "class":"menu menu_admin",
+            "items":[
+                {"label":"Dashboard","value":"index.php?page=admin&section=dashboard"},
+                {"label":"Utilisateurs","value":"index.php?page=admin&section=users"},
+                {"label":"Produits","value":"index.php?page=admin&section=products"},
+                {"label":"Catégories","value":"index.php?page=admin&section=category"},
+                {"label":"Spéciaux","value":"index.php?page=admin&section=specials"},
+                {"label":"Commandes","value":"index.php?page=admin&section=orders"},
+                {"label":"Statistiques","value":"index.php?page=admin&section=stats"},
+                {"label":"Paramètres","value":"index.php?page=admin&section=settings"}
+            ]
+        },
+        "profile":{
+            "class":"menu menu_profile",
+            "items":[
+                {"label":"Profil","value":"index.php?page=profile&section=dashboard"},
+                {"label":"Commandes","value":"index.php?page=profile&section=orders"},
+                {"label":"Favoris","value":"index.php?page=profile&section=favorites"},
+                {"label":"Paramètres","value":"index.php?page=profile&section=settings"}
+            ]
+        },
+        "navigation":{
+            "class":"menu menu_navigation",
+            "items":[
+                {"label":"Accueil","value":"index.php?page=home"},
+                {"label":"Produits","value":"index.php?page=products"},
+                {"label":"Services","value":"index.php?page=services"},
+                {"label":"Contact","value":"index.php?page=contact"},
+                {"label":"Admin","value":"index.php?page=admin&section=dashboard"},
+                {"label":"Profil","value":"index.php?page=profile&section=dashboard"}
+            
+            ]
+        }
+    },
+    "view":{
+        "home":{
+            "header": [
+                {"type":"h1","line":"Bienvenue dans la boutique en ligne"},
+                {"type":"p","line":"Découvrez nos produits et services"}
+            ],
+            "content": {
+                "products": [
+                    {"type":"h2","line":"Nos Produits"},
+                    {"type":"p","line":"Découvrez nos produits les plus populaires"}
+                ],
+                "services": [
+                    {"type":"h2","line":"Nos Services"},
+                    {"type":"p","line":"Découvrez nos services les plus populaires"}
+                ],
+                "teams": [
+                    {"type":"h2","line":"Notre Équipe"},
+                    {"type":"p","line":"Découvrez notre équipe de professionnels"}
+                ]
+            }
+        },
+        "dashboard":{
+            "header": [
+                {"type":"h1","line":"Dashboard"},
+                {"type":"p","line":"Bienvenue dans l'interface d'administration"}
+            ],
+            "cards": [
+                {"type":"card","title":"Utilisateurs","description":"Gérer les utilisateurs","value":"users", "footer":"roles"},
+                {"type":"card","title":"Produits","description":"Gérer les produits","value":"products", "footer":["categories","specials"]},
+                {"type":"card","title":"Commandes","description":"Gérer les commandes","value":"orders"},
+                {"type":"card","title":"Statistiques","description":"Voir les statistiques","value":"stats"},
+                {"type":"card","title":"Paramètres","description":"Modifier les paramètres","value":"settings"}
+            ]
+        },
+        "footer":{
+            "navigation":{
+                "class":"footer_navigation",
+                "title":"Navigation",
+                "items":[
+                    {"label":"Accueil","value":"index.php?page=home"},
+                    {"label":"Produits","value":"index.php?page=products"},
+                    {"label":"Services","value":"index.php?page=services"},
+                    {"label":"Contact","value":"index.php?page=contact"}
+                ]
+            },
+            "legal":{
+                "class":"footer_legal",
+                "title":"Mentions légales",
+                "items":[
+                    {"label":"Conditions générales de vente","value":"index.php?page=cgv"},
+                    {"label":"Politique de confidentialité","value":"index.php?page=privacy"},
+                    {"label":"Cookies","value":"index.php?page=cookies"}
+                ]
+            },
+            
+            "social": {
+                "class":"footer_social",
+                "title":"Réseaux sociaux",
+                "items":[
+                    {"label":"Facebook","value":"https://www.facebook.com", "icon":"asset/svg/facebook.svg"},
+                    {"label":"Twitter","value":"https://www.twitter.com", "icon":"asset/svg/twitter.svg"},
+                    {"label":"Instagram","value":"https://www.instagram.com", "icon":"asset/svg/instagram.svg"},
+                    {"label":"LinkedIn","value":"https://www.linkedin.com", "icon":"asset/svg/linkedin.svg"}
+                ]
+            }
+        },
+        "header":{
+            "class":"header",
+            "logo":"assets/svg/logo.svg"
+        }
+    },
+    "modal":{
+        "login":{
+            "id":"login_modal",
+            "class":"modal modal_login",
+            "title":"Se connecter"
+        },
+        "register":{
+            "id":"register_modal",
+            "class":"modal modal_register",
+            "title":"S'inscrire"
+        }
+    },
+    "form":{  
+        "login":{
+            "id":"login_form",
+            "class":"form_login",
+            "action":"controllers/auth/login.php",
+            "submit":"Se connecter",
+            "inputs":[
+                {"type":"email","name":"email","placeholder":"Email","required":true, "label":"Email"},
+                {"type":"password","name":"password","placeholder":"Mot de passe","required":true, "label":"Mot de passe"}
+            ],
+            "header": [
+                {"type":"h2","line":"Se connecter"},
+                {"type":"p","line":"Ravie de vous revoir !"}
+            ],
+            "footer": [
+                {"type":"span","line":"Pas encore de compte ? <a data-bs-target='#register_modal' data-bs-toggle='modal'>Inscrivez-vous</a>"},
+                {"type":"span","line":"Mot de passe oublié ? <a href=''>Cliquer ici</a>"}
+            ]
+        },
+        "register":{
+            "id":"register_form",
+            "class":"form form_register",
+            "action":"controllers/auth/register.php",
+            "submit":"S'inscrire",
+            "inputs":[
+                {"type":"text","name":"nom","placeholder":"Nom","required":true, "label":"Nom"},
+                {"type":"text","name":"prenom","placeholder":"Prénom","required":true, "label":"Prénom"},
+                {"type":"email","name":"email","placeholder":"Email","required":true, "label":"Email"},
+                {"type":"password","name":"password","placeholder":"Mot de passe","required":true, "label":"Mot de passe"},
+                {"type":"password","name":"password_confirm","placeholder":"Confirmer le mot de passe","required":true, "label":"Confirmer le mot de passe"},
+                {"type":"hidden","name":"role","label":"", "value":1}
+                
+            ],
+            "header": [
+                {"type":"h2","line":"Inscription"},
+                {"type":"p","line":"Bienvenue dans la boutique en ligne"}
+            ],
+            "footer": [
+                {"type":"span","line":"Déjà un compte ? <a data-bs-target='#login_modal' data-bs-toggle='modal'>Connectez-vous</a>"}
+            ]
+        },
+        "user_add":{
+            "id":"user_add_form",
+            "class":"form form_user_add",
+            "action":"controllers/user/add.php",
+            "enctype":"multipart/form-data",
+            "submit":"Ajouter",
+            "inputs":[
+                {"type":"text","name":"nom","placeholder":"Nom","required":true, "label":"Nom"},
+                {"type":"text","name":"prenom","placeholder":"Prénom","required":true, "label":"Prénom"},
+                {"type":"email","name":"email","placeholder":"Email","required":true, "label":"Email"},
+                {"type":"password","name":"password","placeholder":"Mot de passe","required":true, "label":"Mot de passe"},
+                {"type":"password","name":"password_confirm","placeholder":"Confirmer le mot de passe","required":true, "label":"Confirmer le mot de passe"},
+                {"type":"select","name":"role","options":[], "label":"Rôle", "required":true},
+                {"type":"file","name":"avatar","accept":"image/*", "label":"Avatar", "required":false},
+                {"type":"text","name":"numRue","placeholder":"Numéro de rue", "required":false, "label":"Numéro de rue"},
+                {"type":"text","name":"rue","placeholder":"Rue", "required":false, "label":"Rue"},
+                {"type":"text","name":"codePostal","placeholder":"Code postal", "required":false, "label":"Code postal"},
+                {"type":"text","name":"ville","placeholder":"Ville", "required":false, "label":"Ville"},
+                {"type":"text","name":"pays","placeholder":"Pays", "required":false, "label":"Pays"}
+            ],
+            "header": [
+                {"type":"h2","line":"Ajouter un utilisateur"}
+            ],
+            "footer": [
+                {"type":"span","line":"<a href=''>Importer un fichier CSV</a>"}
+            ]
+        },
+        "user_edit":{
+            "id":"user_edit_form",
+            "class":"form form_user_edit",
+            "action":"controllers/user/edit.php",
+            "enctype":"multipart/form-data",
+            "submit":"Modifier",
+            "inputs":[
+                {"type":"hidden","name":"id"},
+                {"type":"text","name":"nom","placeholder":"Nom","required":true, "label":"Nom"},
+                {"type":"text","name":"prenom","placeholder":"Prénom","required":true, "label":"Prénom"},
+                {"type":"email","name":"email","placeholder":"Email","required":true, "label":"Email"},
+                {"type":"password","name":"password","placeholder":"Mot de passe", "required":true, "label":"Mot de passe"},
+                {"type":"password","name":"password_confirm","placeholder":"Confirmer le mot de passe", "required":true, "label":"Confirmer le mot de passe"},
+                {"type":"select","name":"role","options":[], "label":"Rôle", "required":true},
+                {"type":"file","name":"avatar","accept":"image/*", "label":"Avatar", "required":false}
+            ],
+            "header": [
+                {"type":"h2","line":"Modifier un utilisateur"}
+            ],
+            "footer": [
+                {"type":"span","line":"<a href=''>Importer un fichier CSV</a>"}
+            ]
+        },
+        "user_delete":{
+            "id":"user_delete_form",
+            "action":"controllers/user/delete.php",
+            "submit":"Supprimer l'utilisateur",
+            "inputs":[
+                {"type":"hidden","name":"id"}
+            ]
+        },
+        "role_add":{
+            "id":"role_add_form",
+            "class":"form form_role_add",
+            "action":"controllers/role/add.php",
+            "submit":"Ajouter",
+            "inputs":[
+                {"type":"text","name":"nom","placeholder":"Nom","required":true, "label":"Nom"}
+            ],
+            "header": [
+                {"type":"h2","line":"Ajouter un rôle"}
+            ]
+        },
+        "role_edit":{
+            "id":"role_edit_form",
+            "class":"form form_role_edit",
+            "action":"controllers/role/edit.php",
+            "submit":"Modifier",
+            "inputs":[
+                {"type":"hidden","name":"id"},
+                {"type":"text","name":"nom","placeholder":"Nom","required":true, "label":"Nom"}
+            ],
+            "header": [
+                {"type":"h2","line":"Modifier un rôle"}
+            ]
+        },
+        "role_delete":{
+            "id":"role_delete_form",
+            "action":"controllers/role/delete.php",
+            "submit":"Supprimer le rôle",
+            "inputs":[
+                {"type":"hidden","name":"id"}
+            ]
+        },
+        "product_add":{
+            "id":"product_add_form",
+            "class":"form form_product_add",
+            "action":"controllers/product/add.php",
+            "enctype":"multipart/form-data",
+            "submit":"Ajouter",
+            "inputs":[
+                {"type":"text","name":"nom","placeholder":"Nom","required":true, "label":"Nom"},
+                {"type":"text","name":"description","placeholder":"Description","required":true, "label":"Description"},
+                {"type":"number","name":"prix","placeholder":"Prix","required":true, "label":"Prix"},
+                {"type":"select","name":"categorie","options":[], "label":"Catégorie", "required":true},
+                {"type":"select","name":"special", "options":[], "label":"Spécial", "required":false},
+                {"type":"file","name":"image", "label":"Image", "required":false, "accept":"image/*"}
+            ],
+            "header": [
+                {"type":"h2","line":"Ajouter un produit"}
+            ],
+            "footer": [
+                {"type":"span","line":"<a href=''>Importer un fichier CSV</a>"}
+            ]
+        },
+        "product_edit":{
+            "id":"product_edit_form",
+            "class":"form form_product_edit",
+            "action":"controllers/product/edit.php",
+            "enctype":"multipart/form-data",
+            "submit":"Modifier",
+            "inputs":[
+                {"type":"hidden","name":"id"},
+                {"type":"text","name":"nom","placeholder":"Nom","required":true, "label":"Nom"},
+                {"type":"text","name":"description","placeholder":"Description","required":true, "label":"Description"},
+                {"type":"number","name":"prix","placeholder":"Prix","required":true, "label":"Prix"},
+                {"type":"select","name":"categorie","options":[], "label":"Catégorie", "required":true},
+                {"type":"select","name":"special", "options":[], "label":"Spécial", "required":false},
+                {"type":"file","name":"image","accept":"image/*", "label":"Image", "required":false}
+            ],
+            "header": [
+                {"type":"h2","line":"Modifier un produit"}
+            ],
+            "footer": [
+                {"type":"span","line":"<a href=''>Importer un fichier CSV</a>"}
+            ]
+        },
+        "product_delete":{
+            "id":"product_delete_form",
+            "action":"controllers/product/delete.php",
+            "submit": "Supprimer le produit",
+            "inputs":[
+                {"type":"hidden","name":"id"}
+            ]
+        },
+        "categorie_add":{
+            "id":"categorie_add_form",
+            "class":"form form_categorie_add",
+            "action":"controllers/category/add.php",
+            "submit":"Ajouter",
+            "inputs":[
+                {"type":"text","name":"nom","placeholder":"Nom","required":true, "label":"Nom"}
+            ],
+            "header": [
+                {"type":"h2","line":"Ajouter une catégorie"}
+            ]
+        },
+        "categorie_edit":{
+            "id":"categorie_edit_form",
+            "class":"form form_categorie_edit",
+            "action":"controllers/category/edit.php",
+            "submit":"Modifier",
+            "inputs":[
+                {"type":"hidden","name":"id"},
+                {"type":"text","name":"nom","placeholder":"Nom","required":true, "label":"Nom"}
+            ],
+            "header": [
+                {"type":"h2","line":"Modifier une catégorie"}
+            ]
+        },
+        "categorie_delete":{
+            "id":"categorie_delete_form",
+            "action":"controllers/category/delete.php",
+            "submit":"Supprimer la catégorie",
+            "inputs":[
+                {"type":"hidden","name":"id"}
+            ]
+        },
+        "special_add":{
+            "id":"special_add_form",
+            "class":"form form_special_add",
+            "action":"controllers/special/add.php",
+            "submit":"Ajouter",
+            "inputs":[
+                {"type":"text","name":"nom","placeholder":"Nom","required":true, "label":"Nom"}
+            ],
+            "header": [
+                {"type":"h2","line":"Ajouter une spécial"}
+            ]
+        },
+        "special_edit":{
+            "id":"special_edit_form",
+            "class":"form form_special_edit",
+            "action":"controllers/special/edit.php",
+            "submit":"Modifier",
+            "inputs":[
+                {"type":"hidden","name":"id"},
+                {"type":"text","name":"nom","placeholder":"Nom","required":true, "label":"Nom"}
+            ],
+            "header": [
+                {"type":"h2","line":"Modifier une spécial"}
+            ]
+        },
+        "special_delete":{
+            "id":"special_delete_form",
+            "action":"controllers/special/delete.php",
+            "submit":"Supprimer la spécial",
+            "inputs":[
+                {"type":"hidden","name":"id"}
+            ]
+        },
+        "cart_add":{
+            "id":"cart_add_form",
+            "class":"form form_cart_add",
+            "action":"controllers/cart/add.php",
+            "submit":"Ajouter au panier",
+            "inputs":[
+                {"type":"hidden","name":"id"},
+                {"type":"number","name":"quantite","placeholder":"Quantité","required":true, "label":"Quantité"}
+            ]
+        },
+        "cart_remove":{
+            "id":"cart_remove_form",
+            "class":"form form_cart_remove",
+            "action":"controllers/cart/remove.php",
+            "submit":"Supprimer du panier",
+            "inputs":[
+                {"type":"hidden","name":"id"},
+                {"type":"hidden","name":"quantite","value":1}
+            ]
+        }
+    },
+    "table":{
+        "products":{
+            "id":"products_table",
+            "class":"table table_products",
+            "header":[
+                {"type":"h2","line":"Liste des produits"},
+                {"type":"button","label":"Ajouter un produit","data-bs-target":"#product_add_modal","data-bs-toggle":"modal"}
+            ],
+            "columns":[
+                {"label":"ID","value":"id"},
+                {"label":"Nom","value":"nom"},
+                {"label":"Description","value":"description"},
+                {"label":"Prix","value":"prix"},
+                {"label":"Catégorie","value":"categorie"},
+                {"label":"Spécial","value":"special"},
+                {"label":"Image","value":"image"},
+                {"label":"Actions","value":"actions"}
+            ],
+            "rows":[],
+            "actions":[
+                {"type":"button","label":"Modifier","data-bs-target":"#product_edit_modal","data-bs-toggle":"modal", "value":"id", "icon":"asset/svg/edit.svg"},
+                {"type":"button","label":"Supprimer","action":"controllers/product/delete.php", "value":"id", "confirm":"Voulez-vous vraiment supprimer ce produit ?", "icon":"asset/svg/trash.svg"}
+            ],
+            "footer":[
+                {"type":"button","label":"Précédent","value":"previous"},
+                {"type":"button","label":"Suivant","value":"next"}
+            ]
+        },
+        "users":{
+            "id":"users_table",
+            "class":"table table_users",
+            "header":[
+                {"type":"h2","line":"Liste des utilisateurs"},
+                {"type":"button","label":"Ajouter un utilisateur","data-bs-target":"#user_add_modal","data-bs-toggle":"modal"}
+            ],
+            "columns":[
+                {"label":"ID","value":"id"},
+                {"label":"Nom","value":"nom"},
+                {"label":"Prénom","value":"prenom"},
+                {"label":"Email","value":"email"},
+                {"label":"Rôle","value":"role"},
+                {"label":"Avatar","value":"avatar"},
+                {"label":"Actions","value":"actions"}
+            ],
+            "rows":[],
+            "actions":[
+                {"type":"button","label":"Modifier","data-bs-target":"#user_edit_modal","data-bs-toggle":"modal", "value":"id", "icon":"asset/svg/edit.svg"},
+                {"type":"button","label":"Supprimer","action":"controllers/user/delete.php", "value":"id", "confirm":"Voulez-vous vraiment supprimer cet utilisateur ?", "icon":"asset/svg/trash.svg"}
+            ],
+            "footer":[
+                {"type":"button","label":"Précédent","value":"previous"},
+                {"type":"button","label":"Suivant","value":"next"}
+            ]
+        }
+    },
+    "image":{
+        "metaLogo":[
+            {"name":"home","src":"assets/svg/home.svg"},
+            {"name":"products","src":"assets/svg/products.svg"},
+            {"name":"services","src":"assets/svg/services.svg"},
+            {"name":"contact","src":"assets/svg/contact.svg"},
+            {"name":"admin","src":"assets/svg/admin.svg"},
+            {"name":"profile","src":"assets/svg/profile.svg"}
+        ]
+    }
+}

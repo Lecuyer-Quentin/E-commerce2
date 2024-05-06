@@ -1,0 +1,7 @@
+Verifier les permission accorder au utilisateur serveur pour mkdir
+Tester les classes Repo
+
+verifier ajout role dans components login form
+
+
+Attention a l'ordre dans la declaration ede classe

@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "node-sass": "^9.0.0",
+    "normalize.css": "^8.0.1"
+  },
+  "scripts": {
+    "sass": "sass --watch assets/scss/main.scss assets/style.css",
+    "xstart": "sudo /opt/lampp/manager-linux-x64.run",
+    "phpstart": "google-chrome-stable http://localhost/phpmyadmin",
+    "xstop": "sudo /opt/lampp/lampp stop"
+  }
+}
